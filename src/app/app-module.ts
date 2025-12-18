@@ -8,6 +8,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { Footer } from './components/footer/footer';
 import { CarForms } from './components/car-forms/car-forms';
 import { CarTable } from './components/car-table/car-table';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CarTable } from './components/car-table/car-table';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input, output } from '@angular/core';
+import { CarModel } from '../../models/CarModel';
 
 @Component({
   selector: 'app-car-forms',
@@ -7,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './car-forms.css',
 })
 export class CarForms {
+  carForm: CarModel = {} as CarModel;
+  car = input<CarModel>({} as CarModel);
+  saveEmitter = output<CarModel>();
 
+  save() {
+    this.saveEmitter.emit(this.carForm);
+    this.carForm = {} as CarModel;
+  }
 }
