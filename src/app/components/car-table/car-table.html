@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-3 mb-5">
   <div class="display-6">Cars</div>
   <table class="table">
     <thead class="text-center">
@@ -12,6 +12,19 @@
       </tr>
     </thead>
     <tbody class="text-center">
+      @for (car of cars; track car.id) {
+      <tr>
+        <td>{{ car.id }}</td>
+        <td>{{ car.name }}</td>
+        <td>{{ car.maker }}</td>
+        <td>{{ car.price }}</td>
+        <td>{{ car.year }}</td>
+        <td>
+          <button class="btn btn-success me-2">Edit</button>
+          <button class="btn btn-danger">Remove</button>
+        </td>
+      </tr>
+      }
     </tbody>
   </table>
 </div>
