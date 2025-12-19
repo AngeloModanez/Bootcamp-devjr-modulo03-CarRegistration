@@ -29,4 +29,8 @@ export class CarTable {
     this.car = car;
     this.isUpdate = true;
   }
+
+  remove(car: CarModel){
+    this.cars = this.cars.filter(c => c !== car);
+  }
 }
