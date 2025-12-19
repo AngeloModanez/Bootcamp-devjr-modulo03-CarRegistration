@@ -6,7 +6,7 @@
         <div class="row mb-3">
           <label for="name" class="col-sm-1 col-form-label">Name:</label>
           <div class="col-sm-11">
-            <input [(ngModel)]="carForm.name" type="text" id="name" name="name" placeholder="car name"
+            <input [(ngModel)]="car().name" type="text" id="name" name="name" placeholder="car name"
               class="form-control" required />
           </div>
         </div>
@@ -14,7 +14,7 @@
         <div class="row mb-3">
           <label for="maker" class="col-sm-1 col-form-label">Maker:</label>
           <div class="col-sm-11">
-            <input [(ngModel)]="carForm.maker" type="text" id="maker" name="maker" placeholder="car maker"
+            <input [(ngModel)]="car().maker" type="text" id="maker" name="maker" placeholder="car maker"
               class="form-control" required />
           </div>
         </div>
@@ -22,12 +22,12 @@
         <div class="row mb-3">
           <label for="price" class="col-sm-1 col-form-label">Price:</label>
           <div class="col-sm-5">
-            <input [(ngModel)]="carForm.price" type="number" id="price" name="price" placeholder="car price"
+            <input [(ngModel)]="car().price" type="number" id="price" name="price" placeholder="car price"
               class="form-control" required />
           </div>
           <label for="year" class="col-sm-1 col-form-label">Year:</label>
           <div class="col-sm-5">
-            <input [(ngModel)]="carForm.year" type="number" id="year" name="year" placeholder="year of the car"
+            <input [(ngModel)]="car().year" type="number" id="year" name="year" placeholder="year of the car"
               class="form-control" required />
           </div>
         </div>

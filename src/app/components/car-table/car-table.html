@@ -1,4 +1,4 @@
-<app-car-forms [car]="car" (saveEmitter)="save($event)" />
+<app-car-forms [car]="car" (saveEmitter)="save()" />
 
 <div class="container mt-3 mb-5">
   <div class="display-6">Cars</div>
@@ -22,7 +22,7 @@
         <td>{{ car.price }}</td>
         <td>{{ car.year }}</td>
         <td>
-          <button class="btn btn-success me-2">Edit</button>
+          <button class="btn btn-success me-2" (click)="update(car)">Edit</button>
           <button class="btn btn-danger">Remove</button>
         </td>
       </tr>

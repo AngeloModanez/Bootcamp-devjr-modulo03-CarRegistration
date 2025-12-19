@@ -12,10 +12,21 @@ export class CarTable {
   cars: CarModel[] = []
 
   countId: number = 1;
+  isUpdate: boolean = false;
 
-  save(car: CarModel) {
-    car.id = this.countId;
-    this.countId++;
-    this.cars.push(car);
+  save() {
+    if (!this.isUpdate) {
+      this.car.id = this.countId;
+      this.countId++;
+      this.cars.push(this.car);
+    }
+
+    this.car = {} as CarModel;
+    this.isUpdate = false;
+  }
+
+  update(car: CarModel) {
+    this.car = car;
+    this.isUpdate = true;
   }
 }

@@ -8,12 +8,10 @@ import { CarModel } from '../../models/CarModel';
   styleUrl: './car-forms.css',
 })
 export class CarForms {
-  carForm: CarModel = {} as CarModel;
   car = input<CarModel>({} as CarModel);
-  saveEmitter = output<CarModel>();
+  saveEmitter = output();
 
   save() {
-    this.saveEmitter.emit(this.carForm);
-    this.carForm = {} as CarModel;
+    this.saveEmitter.emit();
   }
 }
